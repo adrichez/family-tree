@@ -1,0 +1,959 @@
+%%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+%% DIAGRAMA DE ÁRBOL GENEALÓGICO FAMILIAR
+%%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+%% Top to Bottom (TD), Left to Right (LR), 
+%% Right to Left (RL), Bottom to Top (BT)
+flowchart TD
+
+
+
+
+
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% 1. DEFINICIÓN DE ESTILOS
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    %% Estilos para Nodos (Individuos)
+    classDef hombre fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#000,rx:8,ry:8
+    classDef mujer fill:#FCE4EC,stroke:#C2185B,stroke-width:2px,color:#000,rx:8,ry:8
+    classDef sin_especificar fill:#FFE0B2,stroke:#FB8C00,stroke-width:2px,color:#000,rx:8,ry:8
+
+    %% Estilo para Uniones (Matrimonios)
+    classDef union fill:#78909C,stroke:none,color:transparent
+
+    %% Estilo para el marco de cada generación
+    classDef marco_generacion fill:#78909C14,stroke:#546E7A,stroke-width:2px,stroke-dasharray: 5 5,rx:12,ry:12
+
+    %% Estilo para las sub-ramas (paterna/materna) dentro de la generación
+    classDef marco_rama fill:#90A4AE0D,stroke:#90A4AE,stroke-width:1px,stroke-dasharray: 3 3,rx:8,ry:8
+
+    %% Estilo para grupos familiares (núcleos de misma familia/apellidos)
+    classDef marco_nucleo fill:transparent,stroke:#B0BEC5,stroke-width:1px,stroke-dasharray: 2 2,rx:6,ry:6
+
+    %% Estilo para Conexiones (Parentesco)
+    linkStyle default stroke:#78909C,stroke-width:2px;
+
+
+
+
+
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% 2. NODOS (Individuos)
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    %% Declaración de Nodos: N_[Generación]_[Rama]_[Nombre]
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-4)
+    %%##########################################################################################################
+
+    subgraph Gm4 [Generación -4: Tatarabuelos]
+        direction LR
+
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        %% Rama Paterna
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        
+        subgraph Gm4_Pat ["Rama Paterna"]
+            direction LR
+
+            subgraph Gm4_Pat_Nucleo_Sanchez_Sanchez ["Núcleo Sánchez Sánchez"]
+                direction LR
+            
+                N_Gm4_Pat_Alberto["Alberto Sánchez Sánchez"]
+                class N_Gm4_Pat_Alberto hombre
+            
+            end
+
+            subgraph Gm4_Pat_Nucleo_Blazquez ["Núcleo Blázquez"]
+                direction LR
+            
+                N_Gm4_Pat_Felipa["Felipa Blazquez"]
+                class N_Gm4_Pat_Felipa mujer
+            
+            end
+
+
+            subgraph Gm4_Pat_Nucleo_Albacete ["Núcleo Albacete"]
+                direction LR
+            
+                N_Gm4_Pat_Ventura["Ventura Albacete"]
+                class N_Gm4_Pat_Ventura hombre
+            
+            end
+
+            subgraph Gm4_Pat_Nucleo_Manas ["Núcleo Mañas"]
+                direction LR
+            
+                N_Gm4_Pat_MariaDolores["María Dolores Mañas"]
+                class N_Gm4_Pat_MariaDolores mujer
+            
+            end
+
+
+            subgraph Gm4_Pat_Nucleo_Ramirez ["Núcleo Ramírez"]
+                direction LR
+            
+                N_Gm4_Pat_Fulgencio["Fulgencio Ramírez"]
+                class N_Gm4_Pat_Fulgencio hombre
+            
+            end
+
+            subgraph Gm4_Pat_Nucleo_Garcia ["Núcleo García"]
+                direction LR
+            
+                N_Gm4_Pat_Juana["Juana García"]
+                class N_Gm4_Pat_Juana mujer
+            
+            end
+
+
+            subgraph Gm4_Pat_Nucleo_Linan ["Núcleo Liñán"]
+                direction LR
+            
+                N_Gm4_Pat_Francisco["Francisco Liñán"]
+                class N_Gm4_Pat_Francisco hombre
+            
+            end
+
+            subgraph Gm4_Pat_Nucleo_Rodriguez ["Núcleo Rodríguez"]
+                direction LR
+            
+                N_Gm4_Pat_MariaAntonia["María Antonia Rodríguez"]
+                class N_Gm4_Pat_MariaAntonia mujer
+            
+            end
+        
+        end
+
+
+
+
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        %% Rama Materna
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+        subgraph Gm4_Mat ["Rama Materna"]
+            direction LR
+        
+            subgraph Gm4_Mat_Nucleo_Carrion ["Núcleo Carrión Punzano"]
+                direction LR
+            
+                N_Gm4_Mat_Pablo["Pablo Carrión Punzano"]
+                class N_Gm4_Mat_Pablo hombre
+            
+            end
+
+            subgraph Gm4_Mat_Nucleo_Martinez ["Núcleo Martínez Romero"]
+                direction LR
+            
+                N_Gm4_Mat_Juana["Juana Martínez Romero"]
+                class N_Gm4_Mat_Juana mujer
+            
+            end
+
+
+            subgraph Gm4_Mat_Nucleo_Lopez ["Núcleo López Toribio"]
+                direction LR
+            
+                N_Gm4_Mat_Andres["Andrés López Toribio"]
+                class N_Gm4_Mat_Andres hombre
+            
+            end
+
+            subgraph Gm4_Mat_Nucleo_Heridia ["Núcleo Heridia Gurillo"]
+                direction LR
+            
+                N_Gm4_Mat_Andrea["Andrea Heridia Gurillo"]
+                class N_Gm4_Mat_Andrea mujer
+            
+            end
+
+
+            subgraph Gm4_Mat_Nucleo_Asensio ["Núcleo Asensio"]
+                direction LR
+            
+                N_Gm4_Mat_Angel["Ángel Asensio"]
+                class N_Gm4_Mat_Angel hombre
+            
+            end
+
+            subgraph Gm4_Mat_Nucleo_Sanchez ["Núcleo Sánchez"]
+                direction LR
+            
+                N_Gm4_Mat_Feliciana["Feliciana Sánchez"]
+                class N_Gm4_Mat_Feliciana mujer
+            
+            end
+
+
+            subgraph Gm4_Mat_Nucleo_Parra ["Núcleo Parra"]
+                direction LR
+            
+                N_Gm4_Mat_Jose["José Parra"]
+                class N_Gm4_Mat_Jose hombre
+            
+            end
+
+            subgraph Gm4_Mat_Nucleo_Adan ["Núcleo Adán"]
+                direction LR
+            
+                N_Gm4_Mat_Adriana["Adriana Adán"]
+                class N_Gm4_Mat_Adriana mujer
+            
+            end
+        
+        end
+
+    end
+
+    class Gm4 marco_generacion
+    class Gm4_Pat,Gm4_Mat marco_rama
+    class Gm4_Pat_Nucleo_Sanchez_Sanchez,Gm4_Pat_Nucleo_Blazquez,Gm4_Pat_Nucleo_Albacete,Gm4_Pat_Nucleo_Manas,Gm4_Pat_Nucleo_Ramirez,Gm4_Pat_Nucleo_Garcia,Gm4_Pat_Nucleo_Linan,Gm4_Pat_Nucleo_Rodriguez marco_nucleo
+    class Gm4_Mat_Nucleo_Carrion,Gm4_Mat_Nucleo_Martinez,Gm4_Mat_Nucleo_Lopez,Gm4_Mat_Nucleo_Heridia,Gm4_Mat_Nucleo_Asensio,Gm4_Mat_Nucleo_Sanchez,Gm4_Mat_Nucleo_Parra,Gm4_Mat_Nucleo_Adan marco_nucleo
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-3)
+    %%##########################################################################################################
+
+    subgraph Gm3 [Generación -3: Bisabuelos]
+        direction LR
+
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        %% Rama Paterna
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        
+        subgraph Gm3_Pat ["Rama Paterna"]
+            direction LR
+
+            subgraph Gm3_Pat_Nucleo_Sanchez_Blazquez ["Núcleo Sánchez Blázquez"]
+                direction LR
+            
+                N_Gm3_Pat_Francisco["Francisco Sánchez Blazquez"]
+                class N_Gm3_Pat_Francisco hombre
+            
+            end
+
+            subgraph Gm3_Pat_Nucleo_Albacete_Manas ["Núcleo Albacete Mañas"]
+                direction LR
+            
+                N_Gm3_Pat_Custodia["Custodia Albacete Mañas"]
+                class N_Gm3_Pat_Custodia mujer
+            
+            end
+
+
+            subgraph Gm3_Pat_Nucleo_Ramirez_Garcia ["Núcleo Ramírez García"]
+                direction LR
+            
+                N_Gm3_Pat_Fulgencio["Fulgencio Ramírez García"]
+                class N_Gm3_Pat_Fulgencio hombre
+            
+            end
+
+            subgraph Gm3_Pat_Nucleo_Linan_Rodriguez ["Núcleo Liñán Rodríguez"]
+                direction LR
+            
+                N_Gm3_Pat_Trinidad["Trinidad Liñán Rodríguez"]
+                class N_Gm3_Pat_Trinidad mujer
+            
+            end
+        
+        end
+
+
+
+
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        %% Rama Materna
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+        subgraph Gm3_Mat ["Rama Materna"]
+            direction LR
+        
+            subgraph Gm3_Mat_Nucleo_Carrion_Martinez ["Núcleo Carrión Martínez"]
+                direction LR
+
+                N_Gm3_Mat_Vitoriano["Vitoriano Carrión Martínez"]
+                class N_Gm3_Mat_Vitoriano hombre
+                N_Gm3_Mat_Tomas["Tomás Carrión Martínez"]
+                class N_Gm3_Mat_Tomas hombre
+                N_Gm3_Mat_Escolastico["Escolástico Carrión Martínez"]
+                class N_Gm3_Mat_Escolastico hombre
+                N_Gm3_Mat_Fidel["Fidel Carrión Martínez"]
+                class N_Gm3_Mat_Fidel hombre
+            
+            end
+
+            subgraph Gm3_Mat_Nucleo_Lopez_Heridia ["Núcleo López Heridia"]
+                direction LR
+            
+                N_Gm3_Mat_Zoila["Zoila López Heridia"]
+                class N_Gm3_Mat_Zoila mujer
+                N_Gm3_Mat_JosefaLopez["Josefa López Heridia"]
+                class N_Gm3_Mat_JosefaLopez mujer
+                N_Gm3_Mat_Marina["Marina López Heridia"]
+                class N_Gm3_Mat_Marina mujer
+                N_Gm3_Mat_Juana["Juana López Heridia"]
+                class N_Gm3_Mat_Juana mujer
+            
+            end
+
+
+            subgraph Gm3_Mat_Nucleo_Asensio_Sanchez ["Núcleo Asensio Sánchez"]
+                direction LR
+            
+                N_Gm3_Mat_Julian["Julián Asensio Sánchez"]
+                class N_Gm3_Mat_Julian hombre
+                N_Gm3_Mat_Paulino["Paulino Asensio Sánchez"]
+                class N_Gm3_Mat_Paulino hombre
+                N_Gm3_Mat_Francisco["Francisco Asensio Sánchez"]
+                class N_Gm3_Mat_Francisco hombre
+            
+            end
+
+            subgraph Gm3_Mat_Nucleo_Parra_Adan ["Núcleo Parra Adán"]
+                direction LR
+            
+                N_Gm3_Mat_JosefaParra["Josefa Parra Adán"]
+                class N_Gm3_Mat_JosefaParra mujer
+                N_Gm3_Mat_X["X Parra Adán"]
+                class N_Gm3_Mat_X mujer
+                N_Gm3_Mat_Modesta["Modesta Parra Adán"]
+                class N_Gm3_Mat_Modesta mujer
+                N_Gm3_Mat_Gines["Ginés Parra Adán"]
+                class N_Gm3_Mat_Gines hombre
+                N_Gm3_Mat_Alejandra["Alejandra Parra Adán"]
+                class N_Gm3_Mat_Alejandra mujer
+                N_Gm3_Mat_Jose["José Parra Adán"]
+                class N_Gm3_Mat_Jose hombre
+                N_Gm3_Mat_Adriana["Adriana Parra Adán"]
+                class N_Gm3_Mat_Adriana mujer
+            
+            end
+        
+        end
+
+    end
+
+    class Gm3 marco_generacion
+    class Gm3_Pat,Gm3_Mat marco_rama
+    class Gm3_Pat_Nucleo_Sanchez_Blazquez,Gm3_Pat_Nucleo_Albacete_Manas,Gm3_Pat_Nucleo_Ramirez_Garcia,Gm3_Pat_Nucleo_Linan_Rodriguez marco_nucleo
+    class Gm3_Mat_Nucleo_Carrion_Martinez,Gm3_Mat_Nucleo_Lopez_Heridia,Gm3_Mat_Nucleo_Asensio_Sanchez,Gm3_Mat_Nucleo_Parra_Adan marco_nucleo
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-2)
+    %%##########################################################################################################
+
+    subgraph Gm2 [Generación -2: Abuelos]
+        direction LR
+
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        %% Rama Paterna
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        
+        subgraph Gm2_Pat ["Rama Paterna"]
+            direction LR
+        
+            subgraph Gm2_Pat_Nucleo_Sanchez_Albacete ["Núcleo Sánchez Albacete"]
+                direction LR
+            
+                N_Gm2_Pat_Ventura["Ventura Sánchez Albacete"]
+                class N_Gm2_Pat_Ventura hombre
+                N_Gm2_Pat_Felipe["Felipe Sánchez Albacete"]
+                class N_Gm2_Pat_Felipe hombre
+                N_Gm2_Pat_MariaDolores["María Dolores Sánchez Albacete"]
+                class N_Gm2_Pat_MariaDolores mujer
+                N_Gm2_Pat_Alberto["Alberto Sánchez Albacete"]
+                class N_Gm2_Pat_Alberto hombre
+                N_Gm2_Pat_FranciscoSanchez["Francisco Sánchez Albacete"]
+                class N_Gm2_Pat_FranciscoSanchez hombre
+                N_Gm2_Pat_Gabino["Gabino Sánchez Albacete"]
+                class N_Gm2_Pat_Gabino hombre
+                N_Gm2_Pat_Francisca["Francisca Sánchez Albacete"]
+                class N_Gm2_Pat_Francisca mujer
+                N_Gm2_Pat_Salustriana["Salustriana Sánchez Albacete"]
+                class N_Gm2_Pat_Salustriana mujer
+                N_Gm2_Pat_Ramon["Ramón Sánchez Albacete"]
+                class N_Gm2_Pat_Ramon hombre
+            
+            end
+
+            subgraph Gm2_Pat_Nucleo_Ramirez_Linan ["Núcleo Ramírez Liñán"]
+                direction LR
+            
+                N_Gm2_Pat_Isabel["Isabel Ramírez Liñán"]
+                class N_Gm2_Pat_Isabel mujer
+                N_Gm2_Pat_FranciscoRamirez["Francisco Ramírez Liñán"]
+                class N_Gm2_Pat_FranciscoRamirez hombre
+                N_Gm2_Pat_Antonia["Antonia Ramírez Liñán"]
+                class N_Gm2_Pat_Antonia mujer
+                N_Gm2_Pat_Lucia["Lucía Ramírez Liñán"]
+                class N_Gm2_Pat_Lucia mujer
+                N_Gm2_Pat_Juan["Juan Ramírez Liñán"]
+                class N_Gm2_Pat_Juan hombre
+            
+            end
+        
+        end
+
+
+
+
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        %% Rama Materna
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+        subgraph Gm2_Mat ["Rama Materna"]
+            direction LR
+        
+            subgraph Gm2_Mat_Nucleo_Carrion_Lopez ["Núcleo Carrión López"]
+                direction LR
+            
+                N_Gm2_Mat_Pablo["Pablo Carrión López"]
+                class N_Gm2_Mat_Pablo hombre
+                N_Gm2_Mat_Andres["Andrés Carrión López"]
+                class N_Gm2_Mat_Andres hombre
+                N_Gm2_Mat_Josefa["Josefa Carrión López"]
+                class N_Gm2_Mat_Josefa mujer
+                N_Gm2_Mat_Fidel["Fidel Carrión López"]
+                class N_Gm2_Mat_Fidel hombre
+                N_Gm2_Mat_JoseLuis["José Luis Carrión López"]
+                class N_Gm2_Mat_JoseLuis hombre
+                N_Gm2_Mat_Silverio["Silverio Carrión López"]
+                class N_Gm2_Mat_Silverio hombre
+                N_Gm2_Mat_Juan["Juan Carrión López"]
+                class N_Gm2_Mat_Juan hombre
+            
+            end
+
+            subgraph Gm2_Mat_Nucleo_Asensio_Parra ["Núcleo Asensio Parra"]
+                direction LR
+            
+                N_Gm2_Mat_Fuensanta["Fuensanta Asensio Parra"]
+                class N_Gm2_Mat_Fuensanta mujer
+                N_Gm2_Mat_Ramon["Ramón Asensio Parra"]
+                class N_Gm2_Mat_Ramon hombre
+                N_Gm2_Mat_Antonio["Antonio Asensio Parra"]
+                class N_Gm2_Mat_Antonio hombre
+                N_Gm2_Mat_Angel["Ángel Asensio Parra"]
+                class N_Gm2_Mat_Angel hombre
+                N_Gm2_Mat_Petra["Petra Asensio Parra"]
+                class N_Gm2_Mat_Petra mujer
+
+            end
+        
+        end
+
+    end
+
+    class Gm2 marco_generacion
+    class Gm2_Pat,Gm2_Mat marco_rama
+    class Gm2_Pat_Nucleo_Sanchez_Albacete,Gm2_Pat_Nucleo_Ramirez_Linan,Gm2_Mat_Nucleo_Carrion_Lopez,Gm2_Mat_Nucleo_Asensio_Parra marco_nucleo
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-1)
+    %%##########################################################################################################
+
+    subgraph Gm1 [Generación -1: Padres]
+        direction LR
+
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        %% Rama Paterna
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+        subgraph Gm1_Pat ["Rama Paterna"]
+            direction LR
+
+            subgraph Gm1_Pat_Nucleo_Sanchez_Ramirez ["Núcleo Sánchez Ramírez"]
+                direction LR
+
+                N_Gm1_Pat_Francisco["Francisco Sánchez Ramírez"]
+                class N_Gm1_Pat_Francisco hombre
+                N_Gm1_Pat_Custodia["Custodia Sánchez Ramírez"]
+                class N_Gm1_Pat_Custodia mujer
+                N_Gm1_Pat_Fulgencio["Fulgencio Sánchez Ramírez"]
+                class N_Gm1_Pat_Fulgencio hombre
+                N_Gm1_Pat_Ramon["Ramon Sánchez Ramírez"]
+                class N_Gm1_Pat_Ramon hombre
+                N_Gm1_Pat_Antonio["Antonio Sánchez Ramírez"]
+                class N_Gm1_Pat_Antonio hombre
+            
+            end
+        
+        end
+
+
+
+
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+        %% Rama Materna
+        %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+
+        subgraph Gm1_Mat ["Rama Materna"]
+            direction LR
+        
+            subgraph Gm1_Mat_Nucleo_Carrion_Asensio ["Núcleo Carrión Asensio"]
+                direction LR
+
+                N_Gm1_Mat_Zoila["Zoila Carrión Asensio"]
+                class N_Gm1_Mat_Zoila mujer
+                N_Gm1_Mat_AnaMaria["Ana María Carrión Asensio"]
+                class N_Gm1_Mat_AnaMaria mujer
+            
+            end
+
+        end
+
+    end
+
+    class Gm1 marco_generacion
+    class Gm1_Pat,Gm1_Mat marco_rama
+    class Gm1_Pat_Nucleo_Sanchez_Ramirez,Gm1_Mat_Nucleo_Carrion_Asensio marco_nucleo
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Principal (0)
+    %%##########################################################################################################
+
+    subgraph G0 [Generación 0: Referencia]
+        direction LR
+    
+        subgraph G0_Nucleo_Sanchez_Carrion ["Núcleo Sánchez Carrión"]
+            direction LR
+        
+            N_G0_AnaMaria["Ana María Sánchez Carrión"]
+            class N_G0_AnaMaria mujer
+            N_G0_Adrian["Adrián Sánchez Carrión"]
+            class N_G0_Adrian hombre
+        
+        end
+    
+    end
+
+    class G0 marco_generacion
+    class G0_Nucleo_Sanchez_Carrion marco_nucleo
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Major (+1)
+    %%##########################################################################################################
+
+    %% Completar aquí
+
+
+
+
+
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% 3. UNIONES (Matrimonios)
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    %% Declaración de Uniones: U_[Generación]_[Rama]_[Nombre1]_[Nombre2]
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-4)
+    %%##########################################################################################################
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Paterna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    U_Gm4_Pat_Alberto_Felipa((" "))
+    class U_Gm4_Pat_Alberto_Felipa union
+
+    U_Gm4_Pat_Ventura_MariaDolores((" "))
+    class U_Gm4_Pat_Ventura_MariaDolores union
+
+
+    U_Gm4_Pat_Fulgencio_Juana((" "))
+    class U_Gm4_Pat_Fulgencio_Juana union
+
+    U_Gm4_Pat_Francisco_MariaAntonia((" "))
+    class U_Gm4_Pat_Francisco_MariaAntonia union
+
+
+
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Materna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    U_Gm4_Mat_Pablo_Juana((" "))
+    class U_Gm4_Mat_Pablo_Juana union
+
+    U_Gm4_Mat_Andres_Andrea((" "))
+    class U_Gm4_Mat_Andres_Andrea union
+
+
+    U_Gm4_Mat_Angel_Feliciana((" "))
+    class U_Gm4_Mat_Angel_Feliciana union
+
+    U_Gm4_Mat_Jose_Adriana((" "))
+    class U_Gm4_Mat_Jose_Adriana union
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-3)
+    %%##########################################################################################################
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Paterna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    U_Gm3_Pat_Francisco_Custodia((" "))
+    class U_Gm3_Pat_Francisco_Custodia union
+
+    U_Gm3_Pat_Fulgencio_Trinidad((" "))
+    class U_Gm3_Pat_Fulgencio_Trinidad union
+
+
+
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Materna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    U_Gm3_Mat_Escolastico_Zoila((" "))
+    class U_Gm3_Mat_Escolastico_Zoila union
+
+    U_Gm3_Mat_Julian_Adriana((" "))
+    class U_Gm3_Mat_Julian_Adriana union
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-2)
+    %%##########################################################################################################
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Paterna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    U_Gm2_Pat_Ventura_Antonia((" "))
+    class U_Gm2_Pat_Ventura_Antonia union
+
+
+
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Materna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    U_Gm2_Mat_Pablo_Fuensanta((" "))
+    class U_Gm2_Mat_Pablo_Fuensanta union
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-1)
+    %%##########################################################################################################
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Padres
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    U_Gm1_Padres_Fulgencio_AnaMaria((" "))
+    class U_Gm1_Padres_Fulgencio_AnaMaria union
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Principal (0)
+    %%##########################################################################################################
+
+    %% Completar aquí
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Major (+1)
+    %%##########################################################################################################
+
+    %% Completar aquí
+
+
+
+
+
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% 4. CONEXIONES (Parentesco)
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    %%##########################################################################################################
+    %% Generación Minus (-4 a -3)
+    %%##########################################################################################################
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Paterna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    N_Gm4_Pat_Alberto --- U_Gm4_Pat_Alberto_Felipa
+    N_Gm4_Pat_Felipa --- U_Gm4_Pat_Alberto_Felipa
+
+    U_Gm4_Pat_Alberto_Felipa --> N_Gm3_Pat_Francisco
+
+
+    N_Gm4_Pat_Ventura --- U_Gm4_Pat_Ventura_MariaDolores
+    N_Gm4_Pat_MariaDolores --- U_Gm4_Pat_Ventura_MariaDolores
+
+    U_Gm4_Pat_Ventura_MariaDolores --> N_Gm3_Pat_Custodia
+
+
+
+    N_Gm4_Pat_Fulgencio --- U_Gm4_Pat_Fulgencio_Juana
+    N_Gm4_Pat_Juana --- U_Gm4_Pat_Fulgencio_Juana
+
+    U_Gm4_Pat_Fulgencio_Juana --> N_Gm3_Pat_Fulgencio
+
+
+    N_Gm4_Pat_Francisco --- U_Gm4_Pat_Francisco_MariaAntonia
+    N_Gm4_Pat_MariaAntonia --- U_Gm4_Pat_Francisco_MariaAntonia
+
+    U_Gm4_Pat_Francisco_MariaAntonia --> N_Gm3_Pat_Trinidad
+
+
+
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Materna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    N_Gm4_Mat_Pablo --- U_Gm4_Mat_Pablo_Juana
+    N_Gm4_Mat_Juana --- U_Gm4_Mat_Pablo_Juana
+
+    U_Gm4_Mat_Pablo_Juana --> N_Gm3_Mat_Vitoriano
+    U_Gm4_Mat_Pablo_Juana --> N_Gm3_Mat_Tomas
+    U_Gm4_Mat_Pablo_Juana --> N_Gm3_Mat_Fidel
+    U_Gm4_Mat_Pablo_Juana --> N_Gm3_Mat_Escolastico
+
+
+    N_Gm4_Mat_Andres --- U_Gm4_Mat_Andres_Andrea
+    N_Gm4_Mat_Andrea --- U_Gm4_Mat_Andres_Andrea
+
+    U_Gm4_Mat_Andres_Andrea --> N_Gm3_Mat_Zoila
+    U_Gm4_Mat_Andres_Andrea --> N_Gm3_Mat_JosefaLopez
+    U_Gm4_Mat_Andres_Andrea --> N_Gm3_Mat_Marina
+    U_Gm4_Mat_Andres_Andrea --> N_Gm3_Mat_Juana
+
+
+
+    N_Gm4_Mat_Angel --- U_Gm4_Mat_Angel_Feliciana
+    N_Gm4_Mat_Feliciana --- U_Gm4_Mat_Angel_Feliciana
+
+    U_Gm4_Mat_Angel_Feliciana --> N_Gm3_Mat_Julian
+    U_Gm4_Mat_Angel_Feliciana --> N_Gm3_Mat_Paulino
+    U_Gm4_Mat_Angel_Feliciana --> N_Gm3_Mat_Francisco
+
+
+    N_Gm4_Mat_Jose --- U_Gm4_Mat_Jose_Adriana
+    N_Gm4_Mat_Adriana --- U_Gm4_Mat_Jose_Adriana
+
+    U_Gm4_Mat_Jose_Adriana --> N_Gm3_Mat_JosefaParra
+    U_Gm4_Mat_Jose_Adriana --> N_Gm3_Mat_X
+    U_Gm4_Mat_Jose_Adriana --> N_Gm3_Mat_Modesta
+    U_Gm4_Mat_Jose_Adriana --> N_Gm3_Mat_Gines
+    U_Gm4_Mat_Jose_Adriana --> N_Gm3_Mat_Alejandra
+    U_Gm4_Mat_Jose_Adriana --> N_Gm3_Mat_Jose
+    U_Gm4_Mat_Jose_Adriana --> N_Gm3_Mat_Adriana
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-3 a -2)
+    %%##########################################################################################################
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Paterna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    N_Gm3_Pat_Francisco --- U_Gm3_Pat_Francisco_Custodia
+    N_Gm3_Pat_Custodia --- U_Gm3_Pat_Francisco_Custodia
+
+    U_Gm3_Pat_Francisco_Custodia --> N_Gm2_Pat_Ventura
+    U_Gm3_Pat_Francisco_Custodia --> N_Gm2_Pat_Felipe
+    U_Gm3_Pat_Francisco_Custodia --> N_Gm2_Pat_MariaDolores
+    U_Gm3_Pat_Francisco_Custodia --> N_Gm2_Pat_Alberto
+    U_Gm3_Pat_Francisco_Custodia --> N_Gm2_Pat_FranciscoSanchez
+    U_Gm3_Pat_Francisco_Custodia --> N_Gm2_Pat_Gabino
+    U_Gm3_Pat_Francisco_Custodia --> N_Gm2_Pat_Francisca
+    U_Gm3_Pat_Francisco_Custodia --> N_Gm2_Pat_Salustriana
+    U_Gm3_Pat_Francisco_Custodia --> N_Gm2_Pat_Ramon
+
+
+    N_Gm3_Pat_Fulgencio --- U_Gm3_Pat_Fulgencio_Trinidad
+    N_Gm3_Pat_Trinidad --- U_Gm3_Pat_Fulgencio_Trinidad
+
+    U_Gm3_Pat_Fulgencio_Trinidad --> N_Gm2_Pat_Isabel
+    U_Gm3_Pat_Fulgencio_Trinidad --> N_Gm2_Pat_FranciscoRamirez
+    U_Gm3_Pat_Fulgencio_Trinidad --> N_Gm2_Pat_Antonia
+    U_Gm3_Pat_Fulgencio_Trinidad --> N_Gm2_Pat_Lucia
+    U_Gm3_Pat_Fulgencio_Trinidad --> N_Gm2_Pat_Juan
+
+
+
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Materna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    N_Gm3_Mat_Escolastico --- U_Gm3_Mat_Escolastico_Zoila
+    N_Gm3_Mat_Zoila --- U_Gm3_Mat_Escolastico_Zoila
+
+    U_Gm3_Mat_Escolastico_Zoila --> N_Gm2_Mat_Pablo
+    U_Gm3_Mat_Escolastico_Zoila --> N_Gm2_Mat_Andres
+    U_Gm3_Mat_Escolastico_Zoila --> N_Gm2_Mat_Josefa
+    U_Gm3_Mat_Escolastico_Zoila --> N_Gm2_Mat_Fidel
+    U_Gm3_Mat_Escolastico_Zoila --> N_Gm2_Mat_JoseLuis
+    U_Gm3_Mat_Escolastico_Zoila --> N_Gm2_Mat_Silverio
+    U_Gm3_Mat_Escolastico_Zoila --> N_Gm2_Mat_Juan
+
+
+    N_Gm3_Mat_Julian --- U_Gm3_Mat_Julian_Adriana
+    N_Gm3_Mat_Adriana --- U_Gm3_Mat_Julian_Adriana
+
+    U_Gm3_Mat_Julian_Adriana --> N_Gm2_Mat_Fuensanta
+    U_Gm3_Mat_Julian_Adriana --> N_Gm2_Mat_Ramon
+    U_Gm3_Mat_Julian_Adriana --> N_Gm2_Mat_Antonio
+    U_Gm3_Mat_Julian_Adriana --> N_Gm2_Mat_Angel
+    U_Gm3_Mat_Julian_Adriana --> N_Gm2_Mat_Petra
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Minus (-2 a -1)
+    %%##########################################################################################################
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Paterna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    N_Gm2_Pat_Ventura --- U_Gm2_Pat_Ventura_Antonia
+    N_Gm2_Pat_Antonia --- U_Gm2_Pat_Ventura_Antonia
+
+    U_Gm2_Pat_Ventura_Antonia --> N_Gm1_Pat_Francisco
+    U_Gm2_Pat_Ventura_Antonia --> N_Gm1_Pat_Custodia
+    U_Gm2_Pat_Ventura_Antonia --> N_Gm1_Pat_Fulgencio
+    U_Gm2_Pat_Ventura_Antonia --> N_Gm1_Pat_Ramon
+    U_Gm2_Pat_Ventura_Antonia --> N_Gm1_Pat_Antonio
+
+
+
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Materna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    N_Gm2_Mat_Pablo --- U_Gm2_Mat_Pablo_Fuensanta
+    N_Gm2_Mat_Fuensanta --- U_Gm2_Mat_Pablo_Fuensanta
+
+    U_Gm2_Mat_Pablo_Fuensanta --> N_Gm1_Mat_Zoila
+    U_Gm2_Mat_Pablo_Fuensanta --> N_Gm1_Mat_AnaMaria
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Familia Principal (-1 a 0)
+    %%##########################################################################################################
+
+    N_Gm1_Pat_Fulgencio --- U_Gm1_Padres_Fulgencio_AnaMaria
+    N_Gm1_Mat_AnaMaria --- U_Gm1_Padres_Fulgencio_AnaMaria
+
+    U_Gm1_Padres_Fulgencio_AnaMaria --> N_G0_AnaMaria
+    U_Gm1_Padres_Fulgencio_AnaMaria --> N_G0_Adrian
+
+
+
+
+
+
+    %%##########################################################################################################
+    %% Generación Major (0 a +1)
+    %%##########################################################################################################
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Materna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    %% Completar aquí
+
+
+
+
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+    %% Rama Materna
+    %%≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠
+
+    %% Completar aquí

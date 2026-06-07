@@ -1,0 +1,44 @@
+MIT License
+
+Copyright (c) 2026 Adrián Sánchez Carrión
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this repository’s source code (the "Software"), to deal in the Software
+without restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the
+Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+FAMILY DATA AND ASSETS LICENSE NOTICE
+
+This repository contains **personal, historical, and identifiable family data**
+that is **not covered** by the MIT License.
+
+The following directories, files, and specific strings of data are **All Rights Reserved** 
+and may NOT be copied, reused, modified, redistributed, or republished for other family trees 
+without explicit written permission from the author:
+
+- `assets/02-examples/` (Pre-rendered dark and light family tree preview images)
+- All specific personal names, surnames, and genealogical data combinations 
+  contained within the nodes of `family_tree.mmd`.
+
+These assets and personal historical data are provided **exclusively for illustrative 
+and viewing purposes** within this repository to serve as a structure example.
+
+You are welcome to **study and learn from the structural syntax and code** in this repository 
+(the Mermaid subgraph layout, hierarchy logic, and custom stylesheet classes) and to use it 
+as an architectural template to build your own family tree, **provided that all personal sample 
+names and visual asset previews are completely removed and replaced with your own**.
