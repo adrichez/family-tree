@@ -146,7 +146,7 @@ Open the project folder in your preferred text editor (like VS Code) and follow 
   Locate the generation blocks and replace the sample placeholder names with your own family members using the established syntax:
 
     ```bash
-    N_G0_Adrian["Your Name Here"]
+    N_G0_YourName["Your Name Here"]
     ```
 
 * **Hierarchical Structure**: The diagram flows from Top to Bottom (`TD`) and is divided into nested boxes representing generations, maternal/paternal branches, and specific sibling nuclei.
