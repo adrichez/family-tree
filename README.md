@@ -166,7 +166,7 @@ Open the project folder in your preferred text editor (like VS Code) and follow 
 
 Below you can see the pre-rendered visual results of this template in both dark and light modes. 
 
-A fast and infallible way to export your custom tree into **high-quality PNG, SVG, or PDF** formats is by using the official [Mermaid Live Editor](https://mermaid.live). Simply copy your modified code, paste it into the editor, click on the **"Actions"** menu at the bottom left, and choose your preferred download format to ensure all boxes and texts align perfectly.
+A fast and infallible way to export your custom tree into **high-quality PNG, SVG, or PDF** formats is by using the official [Mermaid Live Editor](https://mermaid.ai/app/dashboard). Simply copy your modified code, paste it into the editor, click on the **"Actions"** menu at the bottom left, and choose your preferred download format to ensure all boxes and texts align perfectly.
 
 
 
